@@ -1,0 +1,39 @@
+<div class="post-container">
+  <div class="post-header">
+    @if (post.author.avatarUrl) {
+      <img
+        [src]="post.author.avatarUrl | imgUrl"
+        alt="avatar"
+        class="avatar"
+      />
+      } @else {
+      <img
+        src="/assets/images/avatar-placeholder.webp"
+        alt="avatar"
+        class="avatar"
+      />
+      }
+    <div class="post-info">
+      <h3>{{ post.author.username }}</h3>
+      <span>{{ post.createdAt | date:'short' }}</span>
+    </div>
+  </div>
+  <p>{{ post.content }}</p>
+  <div class="post-stats">
+    <span><svg class="icon"></svg>{{ post.comments.length }}</span>
+    <span><svg class="icon"></svg>28</span>
+  </div>
+  <div class="comments">
+    <div *ngFor="let comment of comments" class="comment">
+      <img [src]="comment.author.avatarUrl" alt="User Avatar" class="avatar">
+      <div class="comment-body">
+        <h4>{{ comment.author.username }}</h4>
+        <p>{{ comment.content }}</p>
+        <span>{{ comment.createdAt | date:'short' }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="comment-input">
+    <app-post-input [profile]="profile" placeholder="Напишіть коментар"></app-post-input>
+  </div>
+</div>

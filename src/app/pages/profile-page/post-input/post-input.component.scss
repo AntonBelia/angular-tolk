@@ -1,0 +1,75 @@
+:host {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+  background: var(--dark-color);
+  border: 1px solid var(--light-color);
+}
+
+.post-input {
+  &__input {
+    width: 100%;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.post-textarea {
+  border: none;
+  width: 100%;
+}
+
+.post-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  &__emodji {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 12px;
+  }
+
+  &__icon-emodji {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.emoji-picker-wrapper {
+  position: absolute;
+  top: 101%;
+  right: 0;
+  z-index: 1000;
+}
