@@ -29,7 +29,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "docs/assets",
               "src/static"
             ],
             "styles": [
